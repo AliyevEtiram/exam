@@ -1,0 +1,345 @@
+@import "./mixins";
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-family: "Noto Sans Old Permic", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    display: flex;
+    gap: 900px;
+    justify-content: center;
+    padding: 20px 0;
+
+    @include tablet {
+        display: flex;
+        gap: 400px;
+    }
+
+    @include mobile {
+        display: flex;
+        gap: 400px;
+    }
+
+    .img {
+        &__elemen {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .nav {
+        @include tablet {
+            display: none;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+        &__list {
+            list-style: none;
+            display: flex;
+            gap: 12px;
+
+            &-name {
+                &-cklik {
+                    text-decoration: none;
+                    font-family: popins;
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: #111;
+
+                    &:hover {
+                        border-bottom: 2px solid #111;
+                    }
+                }
+            }
+        }
+    }
+
+    .menyu {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+
+        @include tablet {
+            display: block;
+        }
+    }
+
+    @include mobile {
+        display: block;
+    }
+}
+
+#body {
+    #black {
+        background-color: #111;
+        padding: 20px 0;
+
+        .price {
+            color: #fff;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .shop {
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+
+    #shop {
+        background-color: #2c0101;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            flex-wrap: wrap-reverse;
+            align-items: start;
+        }
+
+        .photo {
+            width: 638px;
+            height: 589px;
+
+            &__img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .title {
+            margin-left: 90px;
+
+            @include mobile {
+                margin-right: 100px;
+                margin-bottom: 20px;
+            }
+
+            @include mobile {
+                margin-right: 100px;
+                margin-bottom: 20px;
+            }
+
+            &__name {
+                color: #fff;
+                font-weight: 300;
+                font-size: 40px;
+            }
+
+            &__subtitle {
+                color: #fff;
+                font-weight: 500;
+                font-size: 20px;
+                margin-top: 50px;
+            }
+
+            &__btn {
+                padding: 20px 40px;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    #now {
+        display: flex;
+        justify-content: center;
+        padding: 90px 0;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 30px;
+            margin-right: 20px;
+
+            @include tablet {
+                width: 94%;
+            }
+
+            @include mobile {
+                width: 85%;
+            }
+
+            &__title {
+                font-weight: 500;
+                font-size: 40px;
+            }
+
+            &__text {
+                font-weight: 400;
+                font-size: 18px;
+            }
+
+            &__btn {
+                background-color: #111;
+                padding: 20px 40px;
+                color: #fff;
+                border: none;
+            }
+        }
+
+        .picture {
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            &__img {
+                width: 200px;
+                height: 300px;
+
+                @include tablet {
+                    width: 100%;
+                    height: 600px;
+                }
+
+                @include mobile {
+                    width: 100%;
+                    height: 600px;
+                }
+            }
+        }
+    }
+
+    #background {
+        background-image: url(../assets/images/5img-YDz318GZ0WuvBwLgzindex.\ webp.webp);
+        height: 500px;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .text {
+            color: #fff;
+            font-size: 60px;
+            font-weight: 300;
+            text-align: center;
+
+            @include mobile {
+                font-size: 40px;
+            }
+        }
+    }
+
+    #carts {
+        padding: 80px 0;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .cart {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 30px;
+
+            &__img {
+                width: 592px;
+                height: 432px;
+
+                @include mobile {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &-element {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &__title {
+                font-size: 30px;
+            }
+
+            &__subtitle {
+                font-size: 18px;
+            }
+
+            &__btn {
+                padding: 20px 30px;
+                background-color: #111;
+                color: #fff;
+                border: none;
+            }
+        }
+    }
+
+    #poster {
+        background-image: url(../assets/images/8img-m57zVv6WWeTX3eepson.webp);
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+
+        .title {
+            color: #fff;
+            font-size: 20px;
+            font-weight:500 ;
+        }
+
+        .subtitle {
+            color: #fff;
+            font-size: 60px;
+            font-weight:500 ;
+        }
+
+        .container{
+            
+            &__imput{
+                width: 80px;
+                height: 15px;
+
+
+            }
+        }
+
+        .btn{
+           
+
+
+        }
+    }
+}
